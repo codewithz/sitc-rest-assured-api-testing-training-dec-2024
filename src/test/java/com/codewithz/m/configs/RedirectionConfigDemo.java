@@ -14,7 +14,8 @@ public class RedirectionConfigDemo {
         RestAssured.config=RestAssured.config()
                         .redirect(RedirectConfig
                                 .redirectConfig()
-                                .followRedirects(false)
+                                .followRedirects(true)
+                                .maxRedirects(1)
                         );
         RestAssured
                 .get(BASE_URL+"repos/twitter/bootstrap")
