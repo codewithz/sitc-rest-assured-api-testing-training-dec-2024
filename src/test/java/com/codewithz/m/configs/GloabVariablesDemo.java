@@ -11,6 +11,7 @@ public class GloabVariablesDemo {
     void setup(){
         RestAssured.baseURI="https://reqres.in/";
         RestAssured.basePath="api/users";
+        RestAssured.rootPath="data";
     }
 
     @Test
@@ -18,7 +19,7 @@ public class GloabVariablesDemo {
         RestAssured
                 .get()
                 .then()
-                .body("data.id[0]", Matchers.equalTo(1));
+                .body("id[0]", Matchers.equalTo(1));
     }
 
     @Test
@@ -26,7 +27,7 @@ public class GloabVariablesDemo {
         RestAssured
                 .get()
                 .then()
-                .body("data.first_name[2]", Matchers.equalTo("Emma"));
+                .body("first_name[2]", Matchers.equalTo("Emma"));
     }
 
 
