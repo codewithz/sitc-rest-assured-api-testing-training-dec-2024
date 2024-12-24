@@ -12,7 +12,7 @@ public class RateLimitCoreTest extends BaseRateLimit {
                     .get()
                 .then()
                     .rootPath("resources.core")
-                    .body("limit", Matchers.equalTo(60))
+                    .body("limit", Matchers.equalTo(6))
                     .body("remaining", Matchers.lessThanOrEqualTo(60));
         }
 
