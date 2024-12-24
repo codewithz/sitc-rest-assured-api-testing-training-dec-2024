@@ -21,6 +21,7 @@ public class LoggingDemo {
                 .when()
                 .get(BASE_URL)
                 .then()
+                .statusCode(205)
                     //no conditions
                     .log().headers()
                     //with condition
