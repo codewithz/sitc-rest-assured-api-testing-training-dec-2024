@@ -1,0 +1,8 @@
+<suite name="REST Assured test examples">
+    <test name="All">
+        <packages>
+            <package name="com.codewithz.m.codeorganization.ratelimit*"/>
+            <package name="com.codewithz.m.crud.*"/>
+        </packages>
+    </test>
+</suite>
