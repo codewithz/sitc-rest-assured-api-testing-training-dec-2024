@@ -13,7 +13,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <aspectj.version>1.8.10</aspectj.version>
+        <aspectj.version>1.9.22.1</aspectj.version>
         <allure.version>2.23.0</allure.version>
 
     </properties>
@@ -28,7 +28,15 @@
                     <reportVersion>${allure.version}</reportVersion>
                 </configuration>
             </plugin>
-
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <release>17</release>
+                    <!-- or <source>17</source> + <target>17</target> -->
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
